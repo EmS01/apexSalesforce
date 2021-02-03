@@ -1,0 +1,12 @@
+public class ContactSearch 
+{
+    public static List<Contact> searchForContacts(String lstname, String MailingPostalCode)
+    {
+        List<Contact> contactList = new List<Contact>();
+        contactList = [SELECT LastName, MailingPostalCode FROM Contact WHERE LastName =: lstname AND MailingPostalCode =: MailingPostalCode];
+        
+        return contactList;
+        
+    }
+
+}
